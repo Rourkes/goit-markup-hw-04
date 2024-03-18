@@ -325,9 +325,14 @@ padding-bottom: 8px;
 .team-contact-icon {
     fill: #f4f4fd;
 }
-.team-contact-link:hover, :focus {
+.team-contact-link:hover {
     background-color: #404bbf;
 }
+
+.team-contact-link:focus {
+    background-color: #404bbf;
+}
+
 .team-contact-item {
    
 } 
@@ -483,4 +488,11 @@ justify-content: center;
 }
 .footer-contact-link {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-contact-item {
+    width: 40px;
+    height: 40px;
+}
+.footer-contact-icon {
+    fill: #f4f4fd;
 }
