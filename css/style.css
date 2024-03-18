@@ -45,6 +45,7 @@ address{
 .header {
     font-family: "Raleway", sans-serif;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
     display: flex;
@@ -149,10 +150,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /***********  HEAD ***********/
 .section-head {
     background-color:#2e2f42;
-    background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office\ 1.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
@@ -192,6 +190,7 @@ gap: 10px;
 border: none;
 min-width: 169px;
 height: 56px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-head-button:hover {
     background-color: #404BBF;
@@ -250,6 +249,7 @@ height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 8px;
 }
 /*********************** TEAM ***********/
 .team {
@@ -322,6 +322,13 @@ padding-bottom: 8px;
     justify-content: center;
     flex-direction: row;
     gap: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-contact-icon {
+    fill: #f4f4fd;
+}
+.team-contact-link:hover, :focus {
+    background-color: #404bbf;
 }
 /***************** PORTFOLIO******************/
 .portfolio {
@@ -348,6 +355,7 @@ padding-bottom: 8px;
     border: 1px solid #e7e9fc;
     width: 360px;
     height: 420px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img {
 }
@@ -369,6 +377,8 @@ padding-bottom: 8px;
     letter-spacing: 0.02em;
     color: #434455;
     margin-left: 16px;
+    padding: 40px 32px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-box-1 {
     padding: 32px 16px;
@@ -401,6 +411,9 @@ padding-bottom: 8px;
 .portfolio-item-cover {
     position: relative;
     overflow: hidden;
+}
+.portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 /******************* FOOTER *********/
 .footer {
