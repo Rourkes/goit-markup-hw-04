@@ -90,10 +90,11 @@ color: #2e2f42;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2e2f42;
     padding-top: 24px;
     padding-bottom: 24px;
     display: block;
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-item:hover,
@@ -119,18 +120,47 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
+display: flex;
+align-items: center;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-link:hover,
 .header-contacts-link:focus {
     color: #404bbf;
 }
+.current::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height:4px ;
+    border-radius:2px ;
+    background-color:#404bbf ; 
+}
+
+.current {
+    position: relative;
+    color:#404bbf;
+    }
 
 /***********  HEAD ***********/
 .section-head {
     background-color:#2e2f42;
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .header-container {
 
@@ -208,7 +238,19 @@ height: 56px;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
+.wcwd-icon {
+    
+}
+.wcwd-icon-box {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*********************** TEAM ***********/
 .team {
     background-color: #f4f4fd;
@@ -234,7 +276,7 @@ margin-bottom: 72px;
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
 width: 264px;
-height: 380px;
+height: 428px;
 box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 background: #fff;
 }
@@ -256,10 +298,30 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 text-align: center;
 color: #434455;
+padding-bottom: 8px;
 }
 .team-box-one {
     padding-top: 32px;
     padding-bottom: 32px;
+}
+.team-contact-list {
+    display: flex;
+}
+.team-contact-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-contact-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 24px;
 }
 /***************** PORTFOLIO******************/
 .portfolio {
@@ -313,6 +375,33 @@ color: #434455;
     border: 1px solid #e7e9fc; 
     border-top: none;
 }
+.portfolio-img-cover-text {
+    position: absolute;
+    top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    height: 100%;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-bottom: 164px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 250ms;
+}
+.portfolio-item:hover .portfolio-img-cover-text {
+    transform: translateY(0);
+    
+}
+.portfolio-item-cover {
+    position: relative;
+    overflow: hidden;
+}
 /******************* FOOTER *********/
 .footer {
     background-color: #2e2f42;
@@ -349,5 +438,35 @@ max-width: 264px;
     color: #f4f4fd;
 }
 .footer-box {
+    padding-right: 120px ;
+}
+.footer-box-second {
     
+}
+.footer-container {
+    display: flex;
+}
+.footer-social-media {
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+margin-bottom: 16px;
+}
+.footer-contact-link{
+    width: 40px;
+height: 40px;
+background-color: #4d5ae5;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.footer-contact-list {
+    display: flex;
+    gap: 16px;
+}
+.footer-contact-link:hover {
+    background-color: #31d0aa;
 }
